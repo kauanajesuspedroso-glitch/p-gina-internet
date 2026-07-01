@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Motivação</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #4facfe, #00f2fe);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: white;
+            text-align: center;
+        }
+
+        .container {
+            background: rgba(0, 0, 0, 0.4);
+            padding: 40px;
+            border-radius: 20px;
+            width: 80%;
+            max-width: 600px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+        }
+
+        h1 {
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 20px;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+
+        button {
+            background: #ffcc00;
+            color: #333;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 30px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #ffd633;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>✨ Nunca Desista! ✨</h1>
+
+        <p id="mensagem">
+            Grandes conquistas começam com pequenos passos. Continue acreditando em você!
+        </p>
+
+        <button onclick="trocarMensagem()">
+            Nova Mensagem Motivacional
+        </button>
+    </div>
+
+    <script>
+        const mensagens = [
+            "Acredite em você. Você é capaz de conquistar grandes objetivos!",
+            "O sucesso é a soma de pequenos esforços repetidos diariamente.",
+            "Nunca desista dos seus sonhos. Cada dia é uma nova oportunidade.",
+            "A persistência transforma dificuldades em vitórias.",
+            "Seu único limite é aquele que você acredita ter.",
+            "Cada desafio é uma oportunidade para crescer.",
+            "Continue em frente. O melhor ainda está por vir!",
+            "Você é mais forte do que imagina."
+        ];
+
+        function trocarMensagem() {
+            const indice = Math.floor(Math.random() * mensagens.length);
+            document.getElementById("mensagem").innerHTML = mensagens[indice];
+        }
+    </script>
+
+</body>
+</html>
